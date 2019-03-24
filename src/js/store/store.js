@@ -12,7 +12,9 @@ const getState = ({ getStore, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			events: [],
+			groups: []
 		},
 		actions: {
 			changeColor: (index, color) => {
@@ -28,6 +30,17 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			findGroupName: groupID => {
+				const store = getStore();
+
+				if (store.groups !== []) {
+					const group = store.groups.find(item => {
+						return item.ID == groupID;
+					});
+					console.log(group);
+					return group;
+				}
 			}
 		}
 	};

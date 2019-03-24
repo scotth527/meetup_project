@@ -1,23 +1,52 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+	Button,
+	Collapse,
+	Navbar,
+	NavbarToggler,
+	NavbarBrand,
+	Nav,
+	NavItem,
+	NavLink,
+	UncontrolledDropdown,
+	DropdownToggle,
+	DropdownMenu,
+	DropdownItem
+} from "reactstrap";
 
-export class Navbar extends React.Component {
+export default class Navbar2 extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.toggle = this.toggle.bind(this);
+		this.state = {
+			isOpen: false
+		};
+	}
+	toggle() {
+		this.setState({
+			isOpen: !this.state.isOpen
+		});
+	}
 	render() {
 		return (
-			<nav className="navbar navbar-light bg-light mb-3">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">
-						React Webapp Boilerplate
-					</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">
-							Check the Context in action
-						</button>
-					</Link>
-				</div>
-			</nav>
+			<div className="bg-secondary text-white">
+				<Navbar color="secondary" light expand="md">
+					<NavbarBrand className="text-light" href="/">
+						Meetup
+					</NavbarBrand>
+					<NavbarToggler onClick={this.toggle} />
+					<Collapse isOpen={this.state.isOpen} navbar>
+						<Nav className="ml-auto" navbar>
+							<NavItem>
+								<Button color="primary" size="sm">
+									Login
+								</Button>{" "}
+							</NavItem>
+						</Nav>
+					</Collapse>
+				</Navbar>
+			</div>
 		);
 	}
 }
