@@ -6,7 +6,7 @@ import { Home } from "./views/home.jsx";
 import { Demo } from "./views/demo.jsx";
 import { Single } from "./views/single.jsx";
 import Store from "./store/appContext.jsx";
-import Events from "./views/events.jsx";
+import { Events } from "./views/events.jsx";
 import Navbar2 from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
 
