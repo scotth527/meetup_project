@@ -9,6 +9,7 @@ import Store from "./store/appContext.jsx";
 import { Events } from "./views/events.jsx";
 import Navbar2 from "./component/navbar.jsx";
 import { Footer } from "./component/footer.jsx";
+import { Group } from "./views/groupPage.jsx";
 
 //create your first component
 export class Layout extends React.Component {
@@ -21,7 +22,7 @@ export class Layout extends React.Component {
 						<Switch>
 							<Route exact path="/" component={Home} />
 							<Route path="/demo" component={Demo} />
-							<Route path="/group/:theid" component={Single} />
+							<Route path="/group/:theid" component={Group} />
 							<Route path="/event/:theid" component={Events} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

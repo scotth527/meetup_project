@@ -18,7 +18,7 @@ export class Home extends React.Component {
 					</div>
 				</div>
 				<div className="row">
-					<div className="col-lg-5 col-12 mx-auto">
+					<div className="col-12 mx-auto">
 						<Context.Consumer>
 							{({ store, actions }) => {
 								return store.events.map((item, index) => {

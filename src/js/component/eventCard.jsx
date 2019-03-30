@@ -15,19 +15,19 @@ import Moment from "react-moment";
 
 function EventCard(props) {
 	return (
-		<div key={props.eventID} className="mt-3 mb-3">
+		<div key={props.eventID} className="mx-auto mt-3 mb-3 col-lg-5 col-12 ">
 			<Card>
 				<CardHeader className="h3">
 					<Moment format="MMMM DD" date={props.date} />
 				</CardHeader>
 				<CardBody>
 					<div className="d-flex">
-						<div className="col-lg-3 col-12 pl-0">
+						<div className="col-lg-4 pl-0">
 							<p style={{ fontSize: "30px" }}>
 								<Moment format="h:mm a" time={props.time} />
 							</p>
 						</div>
-						<div className="d-flex flex-column col-9">
+						<div className="d-flex flex-column col-8">
 							<Link
 								className="mb-2"
 								to={"/event/" + props.eventID}>
