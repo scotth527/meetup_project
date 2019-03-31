@@ -3,8 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/functional/scrollToTop.jsx";
 
 import { Home } from "./views/home.jsx";
-import { Demo } from "./views/demo.jsx";
-import { Single } from "./views/single.jsx";
 import Store from "./store/appContext.jsx";
 import { Events } from "./views/events.jsx";
 import Navbar2 from "./component/navbar.jsx";
@@ -21,7 +19,6 @@ export class Layout extends React.Component {
 						<Navbar2 />
 						<Switch>
 							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
 							<Route path="/group/:theid" component={Group} />
 							<Route path="/event/:theid" component={Events} />
 							<Route render={() => <h1>Not found!</h1>} />

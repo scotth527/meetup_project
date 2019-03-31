@@ -68,7 +68,7 @@ export default class Navbar2 extends React.Component {
 							isOpen={this.state.modal}
 							toggle={this.toggleModal}
 							className={this.props.className}>
-							<ModalHeader toggle={this.toggle}>
+							<ModalHeader toggle={this.toggleModal}>
 								Login
 							</ModalHeader>
 							<ModalBody>

@@ -15,7 +15,7 @@ import Moment from "react-moment";
 
 function EventCard(props) {
 	return (
-		<div key={props.eventID} className="mx-auto mt-3 mb-3 col-lg-5 col-12 ">
+		<div className="mx-auto mt-3 mb-3 col-lg-5 col-12 ">
 			<Card>
 				<CardHeader className="h3">
 					<Moment format="MMMM DD" date={props.date} />
@@ -50,7 +50,7 @@ EventCard.propTypes = {
 	event: PropTypes.string,
 	group: PropTypes.string,
 	groupID: PropTypes.number,
-	eventID: PropTypes.number,
+	eventID: PropTypes.string,
 	key: PropTypes.number
 };
 
