@@ -49,7 +49,7 @@ export default class Navbar2 extends React.Component {
 		return (
 			<div className="bg-secondary text-white">
 				<Navbar color="secondary" light expand="md">
-					<NavbarBrand className="text-light" href="/">
+					<NavbarBrand className="text-light" href="/meetup_project/">
 						Meetup
 					</NavbarBrand>
 					<NavbarToggler onClick={this.toggle} />

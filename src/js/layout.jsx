@@ -18,9 +18,19 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Navbar2 />
 						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route path="/group/:theid" component={Group} />
-							<Route path="/event/:theid" component={Events} />
+							<Route
+								exact
+								path="/meetup_project/"
+								component={Home}
+							/>
+							<Route
+								path="/meetup_project/group/:theid"
+								component={Group}
+							/>
+							<Route
+								path="/meetup_project/event/:theid"
+								component={Events}
+							/>
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 						<Footer />

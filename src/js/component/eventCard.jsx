@@ -30,10 +30,10 @@ function EventCard(props) {
 						<div className="d-flex flex-column col-8">
 							<Link
 								className="mb-2"
-								to={"/event/" + props.eventID}>
+								to={"/meetup_project/event/" + props.eventID}>
 								{props.event}
 							</Link>
-							<Link to={"/group/" + props.groupID}>
+							<Link to={"/meetup_project/group/" + props.groupID}>
 								{props.group}
 							</Link>
 						</div>
