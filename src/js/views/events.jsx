@@ -56,7 +56,8 @@ export class Events extends React.Component {
 									<h1>{event.post_title}</h1>
 									<Link
 										to={
-											"/group/" + event.meta_keys._meetup
+											"/meetup_project/group/" +
+											event.meta_keys._meetup
 										}>
 										<h4 className="mb-2">
 											{
