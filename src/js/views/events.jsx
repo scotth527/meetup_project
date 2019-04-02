@@ -186,9 +186,10 @@ export class Events extends React.Component {
 											</p>
 											<p>
 												<Moment
-													format="h:mm a"
-													time={event.meta_keys.time}
-												/>
+													format="LT"
+													parse="HH:mm:ss">
+													{event.meta_keys.time}
+												</Moment>
 											</p>
 											<p>Twice a month</p>
 											<div />

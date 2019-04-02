@@ -24,7 +24,9 @@ function EventCard(props) {
 					<div className="d-flex">
 						<div className="col-lg-4 pl-0">
 							<p style={{ fontSize: "30px" }}>
-								<Moment format="h:mm a" time={props.time} />
+								<Moment format="LT" parse="HH:mm:ss">
+									{props.time}
+								</Moment>
 							</p>
 						</div>
 						<div className="d-flex flex-column col-8">
