@@ -1,3 +1,14 @@
+# Meet-Up project with React and Cloud 9
+
+A responsive meetup app that uses react.js, moment.js, bootstrap, HTML, CSS, allows the user to see details regarding different events, grouped by organization, pages are dynamically created. 
+
+![Gif](./example2.gif)
+
+## Live App: [https://scotth527.github.io/meetup_project/](https://scotth527.github.io/meetup_project/)
+
+Built from the 4GeeksAcademy react-hello boilerplate here: [https://github.com/4GeeksAcademy/react-hello] (https://github.com/4GeeksAcademy/react-hello)
+
+
 # WebApp boilerplate with React and Cloud 9
 
 Requirements: Make sure you are using node version 8
@@ -14,6 +25,7 @@ $ git clone https://github.com/4GeeksAcademy/react-hello-webapp
 ```
 $ npm install
 ```
+
 
 ## Start coding! 
 
