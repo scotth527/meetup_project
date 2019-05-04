@@ -6,7 +6,7 @@ A responsive meetup app that uses react.js, moment.js, bootstrap, HTML, CSS, all
 
 ## Live App: [https://scotth527.github.io/meetup_project/](https://scotth527.github.io/meetup_project/)
 
-Built from the 4GeeksAcademy react-hello boilerplate here: [https://github.com/4GeeksAcademy/react-hello] (https://github.com/4GeeksAcademy/react-hello)
+Built from the 4GeeksAcademy react-hello boilerplate here: [https://github.com/4GeeksAcademy/react-hello](https://github.com/4GeeksAcademy/react-hello)
 
 
 # WebApp boilerplate with React and Cloud 9
