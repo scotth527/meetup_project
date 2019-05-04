@@ -42,7 +42,7 @@ export class Events extends React.Component {
 					let event = store.events.find(item => {
 						return item.ID == eventID;
 					});
-					console.log(event);
+
 					return (
 						<div className="container-fluid">
 							<div className="row bg-secondary d-flex justify-content-between pt-3 pl-lg-4 pl-0 pb-5">

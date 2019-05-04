@@ -21,6 +21,13 @@ export class Group extends React.Component {
 		};
 		this.handleImageLoaded.bind(this);
 	}
+
+	componentDidMount() {
+		this.setState({ loading: false });
+		// Set your fetchs/Ajax requests here.
+		// make sure you're using the store: this.state.store
+	}
+
 	handleImageLoaded() {
 		this.setState({ loading: false });
 	}
@@ -97,19 +104,23 @@ export class Group extends React.Component {
 									})
 									.map((item, index) => {
 										return (
-											<EventCard
-												key={item.ID}
-												date={item.meta_keys.day}
-												time={item.meta_keys.time}
-												event={item.post_title}
-												group={
-													actions.findGroupName(
+											<div key={item.ID}>
+												<EventCard
+													date={item.meta_keys.day}
+													time={item.meta_keys.time}
+													event={item.post_title}
+													group={
+														actions.findGroupName(
+															item.meta_keys
+																._meetup
+														).post_title
+													}
+													eventID={String(item.ID)}
+													groupID={parseInt(
 														item.meta_keys._meetup
-													).post_title
-												}
-												eventID={item.ID}
-												groupID={item.meta_keys._meetup}
-											/>
+													)}
+												/>
+											</div>
 										);
 									});
 							}}

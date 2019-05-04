@@ -23,19 +23,22 @@ export class Home extends React.Component {
 							{({ store, actions }) => {
 								return store.events.map((item, index) => {
 									return (
-										<EventCard
-											key={item.ID}
-											date={item.meta_keys.day}
-											time={item.meta_keys.time}
-											event={item.post_title}
-											group={
-												actions.findGroupName(
+										<div key={item.ID}>
+											<EventCard
+												date={item.meta_keys.day}
+												time={item.meta_keys.time}
+												event={item.post_title}
+												group={
+													actions.findGroupName(
+														item.meta_keys._meetup
+													).post_title
+												}
+												eventID={String(item.ID)}
+												groupID={parseInt(
 													item.meta_keys._meetup
-												).post_title
-											}
-											eventID={item.ID}
-											groupID={item.meta_keys._meetup}
-										/>
+												)}
+											/>
+										</div>
 									);
 								});
 							}}

@@ -94,7 +94,6 @@ const getState = ({ getStore, setStore }) => {
 					const group = store.groups.find(item => {
 						return item.ID == groupID;
 					});
-					console.log(group);
 					return group;
 				}
 			}
