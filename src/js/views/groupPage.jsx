@@ -9,7 +9,7 @@ import { ClipLoader } from "react-spinners";
 // Another way to import
 const override = css`
 	display: block;
-	margin: auto;
+	margin: auto auto;
 	border-color: red;
 `;
 

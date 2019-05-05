@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { css } from "@emotion/core";
+// First way to import
+import { ClipLoader } from "react-spinners";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "reactstrap";
 import {
@@ -21,13 +24,31 @@ import {
 	Input
 } from "reactstrap";
 
+const override = css`
+	display: block;
+	margin: auto auto;
+	border-color: red;
+`;
+
 export class Events extends React.Component {
 	constructor(props) {
 		super(props);
 		this.toggleModal = this.toggleModal.bind(this);
 		this.state = {
-			modal: false
+			modal: false,
+			loading: true
 		};
+		this.divImage = React.createRef();
+	}
+	componentDidMount() {
+		let img = new Image();
+		img.onload = () => {
+			console.log("Image loaded");
+			this.divImage.current.style.backgroundImage =
+				"url(" + img.src + ")";
+			this.setState({ loading: false });
+		};
+		img.src = "https://picsum.photos/600/350/?random";
 	}
 	toggleModal() {
 		this.setState(prevState => ({
@@ -164,12 +185,20 @@ export class Events extends React.Component {
 							<div className="row mt-3 mb-3">
 								<div className="col-lg-11 col-12 d-flex flex-wrap mx-auto">
 									<div
+										ref={this.divImage}
 										className="mr-lg-5 mr-0 col-lg-7 col-12"
 										style={{
-											background: `url(${"https://picsum.photos/800/500/?random"}) center center no-repeat`,
+											background: `center center no-repeat`,
 											height: "500px"
-										}}
-									/>
+										}}>
+										<ClipLoader
+											css={override}
+											sizeUnit={"px"}
+											size={150}
+											color={"#123abc"}
+											loading={this.state.loading}
+										/>
+									</div>
 									<div
 										className="col-lg-3 col-12 d-flex mt-lg-0 mt-2 ml-lg-3 ml-0  border border-secondary rounded p-4"
 										style={{ height: "175px" }}>
