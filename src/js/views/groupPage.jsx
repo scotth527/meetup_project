@@ -9,7 +9,7 @@ import { ClipLoader } from "react-spinners";
 // Another way to import
 const override = css`
 	display: block;
-	margin: 0 auto;
+	margin: auto;
 	border-color: red;
 `;
 
@@ -19,18 +19,20 @@ export class Group extends React.Component {
 		this.state = {
 			loading: true
 		};
-		this.handleImageLoaded.bind(this);
+		this.divImage = React.createRef();
 	}
 
 	componentDidMount() {
-		this.setState({ loading: false });
-		// Set your fetchs/Ajax requests here.
-		// make sure you're using the store: this.state.store
+		let img = new Image();
+		img.onload = () => {
+			console.log("Image loaded");
+			this.divImage.current.style.backgroundImage =
+				"url(" + img.src + ")";
+			this.setState({ loading: false });
+		};
+		img.src = "https://picsum.photos/600/350/?random";
 	}
 
-	handleImageLoaded() {
-		this.setState({ loading: false });
-	}
 	render() {
 		return (
 			<div className="container-fluid">
@@ -42,10 +44,9 @@ export class Group extends React.Component {
 							<div className="row bg-secondary ">
 								<div className="col-lg-8 col-12 ml-lg-4 ml-0 pt-4 pb-4 d-flex flex-wrap">
 									<div
-										onLoad={e => this.handleImageLoaded}
+										ref={this.divImage}
 										className="col-lg-7 col-12 mr-lg-2 mr-0"
 										style={{
-											background: `url(${"https://picsum.photos/600/350/?random"}) center center no-repeat`,
 											height: "350px"
 										}}>
 										<ClipLoader
