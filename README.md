@@ -2,7 +2,7 @@
 
 A responsive meetup app that uses react.js, moment.js, bootstrap, HTML, CSS, allows the user to see details regarding different events, grouped by organization, pages are dynamically created. 
 
-![Gif](./example2.gif)
+![Gif](./example3.gif)
 
 ## Live App: [https://scotth527.github.io/meetup_project/](https://scotth527.github.io/meetup_project/)
 
